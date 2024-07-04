@@ -1,5 +1,5 @@
 class Stack:
-    def _init_(self):
+    def __init__(self):
         self.items = []
 
     def is_empty(self):
@@ -21,11 +21,11 @@ class Stack:
     def size(self):
         return len(self.items)
 
-    def _str_(self):
+    def __str__(self):
         return str(self.items)
 
 class QueueUsingStacks:
-    def _init_(self):
+    def __init__(self):
         self.stack1 = Stack()
         self.stack2 = Stack()
 
@@ -54,7 +54,7 @@ class QueueUsingStacks:
     def size(self):
         return self.stack1.size() + self.stack2.size()
 
-    def _str_(self):
+    def __str__(self):
         return str(self.stack1.items[::-1] + self.stack2.items)
 
 def main():
@@ -99,5 +99,5 @@ def main():
         else:
             print("Invalid choice. Please try again.")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
